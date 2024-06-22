@@ -26,6 +26,7 @@ export default function CustomNavigationBar() {
         if(cleanedPath == 'portofolio'){
             setCurrent('portofolio')
         }
+        console.log(current);
     }
 
     useEffect(() => {    
