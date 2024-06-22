@@ -106,7 +106,7 @@ export default function CustomNavigationBar() {
                             <p>Services</p>
                             { current === 'services' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
                         </a>
-                        <a href="/portofolio" className={`${ current === 'portofolio' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
+                        <a onClick={() => console.log('a', current)} className={`${ current === 'portofolio' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
                             <p>Portofolio</p>
                             { current === 'portofolio' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
                         </a>
