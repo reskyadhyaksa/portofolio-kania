@@ -43,7 +43,7 @@ export default function AboutPage() {
                 </div>
             </div>
 			<div/>
-            <img src="/photome.png" alt="" className="absolute sm:hidden xl:inline bottom-0 left-28 h-[300px] xl:h-[300px] 2xl:h-[350px]"/>
+            <img src="/photome.png" alt="" className="absolute hidden xl:inline bottom-0 left-28 h-[300px] xl:h-[300px] 2xl:h-[350px]"/>
 			<Image src={'/background1.png'} fill={true} quality={100} alt='' sizes="auto" className='hidden sm:flex absolute animate-fade object-cover -z-10'/>
 			<Image src={'/responsive1.png'} fill={true} quality={100} alt='' sizes="auto" className='sm:hidden absolute animate-fade object-cover -z-10'/>
 		</main>
