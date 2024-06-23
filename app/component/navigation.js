@@ -76,7 +76,7 @@ export default function CustomNavigationBar() {
             </div>}
 
             {/* Button Tray Menu */}
-            {active && <div className="bg-white animate-translateIn border-[#9A00B3] rounded-md left-7 top-16 border-[1px] flex flex-col absolute w-[100px] items-center text-sm font-bold text-[#9A00B3]">
+            {active && <div className="bg-white animate-translateIn border-[#9A00B3] rounded-md left-7 top-16 border-[1px] flex flex-col absolute w-[140px] items-center text-base font-bold text-[#9A00B3]">
                 <a href="/" className="border-b-2 border-b-gray-400 w-full text-center">Home</a>
                 <a href="/about" className="border-b-2 border-b-gray-400 w-full text-center">About Me</a>
                 <a href="/services" className="border-b-2 border-b-gray-400 w-full text-center">Services</a>
@@ -89,26 +89,26 @@ export default function CustomNavigationBar() {
                     <div className="flex flex-row gap-2">
                         <img src="/photonav.png" alt="" className="h-14"/>
                         <div className="flex flex-col justify-center font-bold text-white text-xs lg:text-sm">
-                            <p>Kania Ardhani Putri</p>
+                            <p className="flex">Kania <span className="sm:hidden lg:flex ml-1">Ardhani Putri</span></p>
                             <p className="text-gray-300">Personal</p>
                         </div>
                     </div>
-                    <div className="flex justify-center place-items-center sm:gap-10 lg:gap-32 sm:text-xs md:text-xs xl:text-base font-medium text-white animate-fade">
-                        <a href="/" className={`${ current === 'home' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
+                    <div className="flex justify-center place-items-center sm:gap-5 md:gap-8 lg:gap-24 sm:text-xs md:text-sm font-medium text-white animate-fade">
+                        <a href="/" className={`${ path === '/' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
                             <p>Home</p>
-                            { current === 'home' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
+                            { path === '/' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
                         </a>
-                        <a href="/about" className={`${ current === 'about' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
+                        <a href="/about" className={`${ path === '/about' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
                             <p>About Me</p>
-                            { current === 'about' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
+                            { path === '/about' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
                         </a>
-                        <a href="/services" className={`${ current === 'services' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
+                        <a href="/services" className={`${ path === '/services' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
                             <p>Services</p>
-                            { current === 'services' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
+                            { path === '/services' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
                         </a>
-                        <a onClick={() => console.log('a', current)} className={`${ current === 'portofolio' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
+                        <a href='/portofolio' className={`${ path === '/portofolio' ? 'text-[#9A00B3] font-extrabold' : 'text-white font-medium'} hover:font-extrabold hover:scale-105 flex flex-col place-items-center`}>
                             <p>Portofolio</p>
-                            { current === 'portofolio' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
+                            { path === '/portofolio' && <hr className="animate-scale w-[30px] border-[#9A00B3] border-2 rounded-full"/>}
                         </a>
                     </div>
                     <a className="flex h-fit justify-center place-items-center text-white px-2 lg:px-4 py-2 text-xs lg:text-sm gap-1 bg-[#FB33FF]/50 rounded-2xl">
